@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Financial Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #47b916;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Real-Time Financial Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Billing Information
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Last Bill:</strong> $<span id="lastBill">120.00</span></p>
+                        <p><strong>Due Amount:</strong> $<span id="dueAmount">30.00</span></p>
+                        <p><strong>Next Due Date:</strong> <span id="nextDueDate">30th June 2024</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Income Information
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Incoming:</strong> $<span id="incoming">2000.00</span></p>
+                        <p><strong>Outgoing:</strong> $<span id="outgoing">1500.00</span></p>
+                        <p><strong>Net Income:</strong> $<span id="netIncome">500.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Payment History
+                    </div>
+                    <div class="card-body">
+                        <ul id="paymentHistory">
+                            <li>Paid $100.00 on 15th May 2024</li>
+                            <li>Paid $50.00 on 20th April 2024</li>
+                            <li>Paid $200.00 on 25th March 2024</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        Other Financial Information
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Loan Amount:</strong> $<span id="loanAmount">5000.00</span></p>
+                        <p><strong>Interest Rate:</strong> <span id="interestRate">5%</span></p>
+                        <p><strong>Monthly Payment:</strong> $<span id="monthlyPayment">150.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-decoration: none;" class="bg-light text-center py-4">
+        <div class="container">
+            <div  style="color: black;"    class="row">
+                <div class="col-md-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-dark">About Us</a></li>
+                        <li><a href="contact.html" class="text-dark">Contact Us</a></li>
+                        <li><a href="#" class="text-dark">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Help Center</a></li>
+                        <li><a href="#" class="text-dark">FAQs</a></li>
+                        <li><a href="#" class="text-dark">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Social Media</h5>
+                    <a href="#" class="text-dark mx-2"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-twitter-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-linkedin-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpERiu5VUcHI+I6uMUIgJbsBG73WmZ1d2LpR34py9hu6iZexBEwbBQk3QCRp" crossorigin="anonymous"></script>
+    <script>
+        // Simulating real-time data updates
+        function updateDashboard() {
+            // Simulate fetching data from a server
+            const data = {
+                lastBill: (Math.random() * 100).toFixed(2),
+                dueAmount: (Math.random() * 50).toFixed(2),
+                nextDueDate: new Date().toLocaleDateString(),
+                incoming: (Math.random() * 3000).toFixed(2),
+                outgoing: (Math.random() * 2000).toFixed(2),
+                netIncome: (Math.random() * 1000).toFixed(2),
+                loanAmount: (Math.random() * 10000).toFixed(2),
+                interestRate: (Math.random() * 10).toFixed(2),
+                monthlyPayment: (Math.random() * 500).toFixed(2),
+                paymentHistory: [
+                    `Paid $${(Math.random() * 100).toFixed(2)} on ${new Date().toLocaleDateString()}`,
+                    `Paid $${(Math.random() * 100).toFixed(2)} on ${new Date().toLocaleDateString()}`,
+                    `Paid $${(Math.random() * 100).toFixed(2)} on ${new Date().toLocaleDateString()}`
+                ]
+            };
+
+            // Update the HTML elements with the new data
+            document.getElementById('lastBill').textContent = data.lastBill;
+            document.getElementById('dueAmount').textContent = data.dueAmount;
+            document.getElementById('nextDueDate').textContent = data.nextDueDate;
+            document.getElementById('incoming').textContent = data.incoming;
+            document.getElementById('outgoing').textContent = data.outgoing;
+            document.getElementById('netIncome').textContent = data.netIncome;
+            document.getElementById('loanAmount').textContent = data.loanAmount;
+            document.getElementById('interestRate').textContent = data.interestRate + '%';
+            document.getElementById('monthlyPayment').textContent = data.monthlyPayment;
+
+            const paymentHistoryElement = document.getElementById('paymentHistory');
+            paymentHistoryElement.innerHTML = '';
+            data.paymentHistory.forEach(payment => {
+                const li = document.createElement('li');
+                li.textContent = payment;
+                paymentHistoryElement.appendChild(li);
+            });
+        }
+
+        // Initial load
+        updateDashboard();
+
+        // Update every 5 seconds
+        setInterval(updateDashboard, 5000);
+    </script>
+</body>
+</html>

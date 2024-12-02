@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar-brand img {
+            width: 60px;
+            height: 50px;
+        }
+        .profile-image {
+            width: 190px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        hr {
+            border-color: white;
+            margin: 40px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-media-icons a {
+            color: #fff;
+            margin: 0 5px;
+        }
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                width: 50px;
+                height: 40px;
+            }
+            .profile-image {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="Logo">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign-Up</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-outline-primary">My Profile</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Profile Content -->
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center text-center">
+        <div class="col-md-12">
+            <img src="profile.png" alt="Profile Image" class="profile-image mb-3">
+            <h1 class="text-black">Vikram Rathore</h1>
+            <hr>
+            <p class="text-black">Complete your profile for the best results and ease up your application process</p>
+        </div>
+    </div>
+</div>
+
+<!-- Profile Sections -->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-primary">Personal Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address"></textarea>
+                        </div>
+                        <button onclick="yes()" type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-primary">Contact Details</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <button onclick="yes()" type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-primary">Company Information</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="position">Position</label>
+                            <input type="text" class="form-control" id="position" placeholder="Enter your position">
+                        </div>
+                        <button onclick="yes()" type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-primary">Wiki Media..</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="interests">Interests</label>
+                            <textarea class="form-control" id="interests" rows="3" placeholder="Enter your interests"></textarea>
+                        </div>
+                        <button onclick="yes()" type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                function yes() {
+                    alert("Data Saved Successfully"
+                                + "||Admin");
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" class="form-control" id="contact-name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" class="form-control" id="contact-email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea class="form-control" id="contact-message" rows="3" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="about.html" class="text-white">About Us</a></li>
+                    <li><a href="contact.html" class="text-white" data-toggle="modal" data-target="#contactModal">Contact Us</a></li>
+                    <li><a href="terms.html" class="text-white">Terms & Conditions</a></li>
+                    <li><a href="privacy.html" class="text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Support</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Help Center</a></li>
+                    <li><a href="#" class="text-white">FAQs</a></li>
+                    <li><a href="#" class="text-white">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Social Media</h5>
+                <div class="social-media-icons">
+                    <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#"><i class="ri-twitter-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-linkedin-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="" height="2rem" width="34rem">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="credit" id="creditCardDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Credit Card
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="creditCardDropdown">
+                        <a class="dropdown-item" href="axis1.html">Axis Bank Credit Card</a>
+                        <a class="dropdown-item" href="hdfc1.html">HDFC Credit Card</a>
+                        <a class="dropdown-item" href="sbi1.html">SBI Credit Card</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Loans
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loansDropdown">
+                        <a class="dropdown-item" href="personalloan.html">Personal Loan</a>
+                        <a class="dropdown-item" href="businessloan.html">Business Loan</a>
+                        <a class="dropdown-item" href="property.html">Property Loan</a>
+                        <a class="dropdown-item" href="loans.html">Other_0ption Loan</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="ToolsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="ToolsDropdown">
+                        <a class="dropdown-item" href="emi.html">EMI Calculator</a>
+                        <a class="dropdown-item" href="cibil.html">CIBIL SCORE</a>
+                        <a class="dropdown-item" href="#">EXTRA</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Insurance
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loansDropdown">
+                        <a class="dropdown-item" href="insurance.html">Personal Loan</a>
+                        <a class="dropdown-item" href="health.html">Health Loan</a>
+                       
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Blogs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                        <a class="dropdown-item" href="blog.html">Blogs</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="creditScoreDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Google Form
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="creditScoreDropdown">
+
+                        <a class="dropdown-item"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdbCbfWwAz1vF-Ze-t_OUuPLng6Rpf9wKluqJck0emkqb0xlw/viewform?usp=pp_url">Form-1</a>
+
+
+                        <a class="dropdown-item" href="#">Form-2</a>
+                        <a class="dropdown-item" href="#">Form-3</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Others
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                        <a class="dropdown-item" href="apply.html">Apply</a>
+                        <a class="dropdown-item" href="Payment.html">Payment</a>
+                        <a class="dropdown-item" href="#">Form-3</a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav">
+                <div class="search-container">
+                    <input type="text" id="search-bar" onkeyup="filterServices()" placeholder="Search for services...">
+                    <ul style="text-decoration: none;" id="service-list">
+                        <li><a href="#credit-cards">Credit-Cards</a></li>
+                        <li><a href="#loans">Loans</a></li>
+                        <li><a href="emi.html">EMI</a></li>
+                        <li><a href="cibil.html">CIBIL SCORE</a></li>
+                        <li><a href="#subscription-plans">Subscription-Plans</a></li>
+                        <li><a href="blog.html">Blogs</a></li>
+                        <li><a href="">Forms</a></li>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign-UP</a>
+        </li>
+        <li class="nav-item">
+            <a href="user.html"><button class="btn btn-outline-success"> <i class="ri-id-card-line"></i>My
+                    Profile</button></a>
+        </li>
+        </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>
+                    <span style="color: #89C142; font-size: 60px;">Credit Score Checker</span>
+                    <br>
+                    <h3 style="color: blue;"> Only for Professional.</h3>
+                </h2>
+                <p style="color: white;">Get Credit-Debit & <span style="color: red;"> EMI</span> Score, Apply for the
+                    Loans Which Best For You <br>
+                    Get Best Loan at any time and Ensure Good Safety regarding cards.</p>
+                <a style="margin:12vw;margin-left:1vw;" href="index.html"><button
+                        class="btn btn-success">Explore</button><br>
+                </a>
+                <br>
+            </div>
+            <br>
+            <br>
+            <div class="col-md-6">
+                <img class="img-fluid rounded" style="border-radius:33px;"
+                    src="https://img.freepik.com/premium-photo/seamless-checkout-multiple-payment-options-easy-purchase_1036975-150164.jpg?size=626&ext=jpg&ga=GA1.1.139577874.1718002548&semt=ais_user"
+                    alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+    <!-- Stats Section -->
+    <!-- 
+    <div class="tooltip">
+<span id="tooltiptext"> -->
+
+
+    <div class="container my-5 text-center">
+        <div style="color: white;" class="row">
+
+
+            <div class="col-md-3">
+                <i class="ri-user-smile-line" style="font-size: 50px;"></i>
+                <h2>50,00,000<span style="color: green;">+</span></h2>
+                <h3>Happy Customers</h3>
+            </div>
+            <div class="col-md-3">
+                <i class="ri-contacts-fill" style="font-size: 50px;"></i>
+                <h2>2,500<span style="color: green;">+</span></h2>
+                <h3>Relationship Managers</h3>
+            </div>
+            <div class="col-md-3">
+                <i class="ri-bank-fill" style="font-size: 50px;"></i>
+                <h2>100<span style="color: green;">+</span></h2>
+                <h3>Banks & NBFCs</h3>
+            </div>
+            <div class="col-md-3">
+                <i class="ri-plant-line" style="font-size: 50px;"></i>
+                <h2>1,00,000 Cr <span style="color: green;">+</span></h2>
+                <h3>Business Conducted</h3>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </span>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <!-- Information Section -->
+    <div style="color: white;" class="container my-5 text-center">
+        <h1 style="color: white;">Find, Compare and buy financial products <span style=" color:#89C142;">with
+                ease.</span></h1>
+        <p>By logging on to our website or app, you can instantly gain access to the best-matched products, irrespective
+            of ticket-size, location & nature of loan query. Our loan specialists offer personalised loan assistance and
+            help you navigate your credit requirement without any hassle. With 100+ partner lenders on board, we assure
+            you the best loan offer as per your needs.</p>
+    </div>
+
+    <!-- Product Section -->
+
+    </div>
+    </div>
+
+    <div class="bb1">
+        <h3 style="margin-left: 3rem;font-size:3rem">Bringing You <span style="color: rgb(60, 147, 156);">Best</span>
+            Products</h3>
+        <h5 style="margin-left: 4rem;font-size:1rem">from Top Banks & Financial Institutions</h5>
+        <div class="boxex">
+            <div class="box">
+                <img src="https://cdn1.mymoneymantra.com/business_loan_99304060b9.svg" alt="">
+                <a href="personalloan.html">
+                    <h3>Personal-Loan</h3>
+                </a>
+
+            </div>
+            <div class="box">
+                <img src="https://cdn1.mymoneymantra.com/Credit_Card_c729194945.webp" alt="">
+                <h3>Credit-Card</h3>
+                <div class="dropdown">
+                    <button class="dropbtn">Select Card</button>
+                    <div class="dropdown-content">
+                        <a href="axis1.html">Axis Card</a>
+                        <a href="hdfc1.html">HDFC Card</a>
+                        <a href="sbi1.html">SBI-Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://cdn1.mymoneymantra.com/Business_Loan_cd14cecb36.webp" alt="">
+                <a href="businessloan.html">
+                    <h3>Business-Loan</h3>
+                </a>
+            </div>
+            <div class="box">
+                <img src="https://cdn1.mymoneymantra.com/Home_Loan_80525c3d86.webp" alt="">
+                <a href="homeloan.html">
+                    <h3>Home-Loan</h3>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem;" class="m1">
+        <h5 >Our Global Partners</h5>
+        <h6>Get in-depth knowledge about all things related to loans and your finances
+
+        </h6>
+    </div>
+    <div class="div1">
+        <div class="b1">
+            <img src="https://cdn.urbanmoney.com/images/mapImg.svg" alt="">
+        </div>
+        <div class="b2">
+            <h3>Money-Mantra</h3>
+            <h3>Partner Business Program</h3>
+            <p style="color: white;">Desined Exclusively to help Urban-MOney <br>
+                Money (Square Capital) authorized <br>
+                partners, the Urban Money Partner <br>
+                app lets you view offers, earnings <br>
+                and cases updates in real time, and <br>
+                get privileged access. <br>
+                <img src="https://cdn.mymoneymantra.com/chart_15f235bf64_1_e23087f647.svg" alt="">
+
+
+
+            </p>
+
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <h2
+            style=" margin-left:6rem;font-size: 2rem;color:white; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Our Clients</h2>
+        <div style="margin: 2rem;margin: right 2rem;" class="slider">
+
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/8-removebg-preview.d645ff04cec18e415899.png"
+                    alt="Client 1">
+            </div>
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/10-removebg-preview.be81cfffb2f850dd8ae0.png"
+                    alt="Client 2">
+            </div>
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/5-removebg-preview.77d217d1836f67221ed5.png"
+                    alt="Client 3">
+            </div>
+            <!-- Add more slides as needed -->
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/3-removebg-preview.dfa7a101410da4d721c8.png"
+                    alt="Client 1">
+            </div>
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/4-removebg-preview.5bd5952ebf789e8de5cc.png"
+                    alt="Client 2">
+            </div>
+            <div class="slide">
+                <img src="http://swayambhustrategy.com/static/media/7-removebg-preview.c33fd75bce597c7cd006.png"
+                    alt="Client 3">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+chatbot code is here -->
+
+    <div style="margin-left: 6rem;" id="popup" class="popup">
+        <h2>Advertisement</h2>
+        <p>This is your popup advertisement content.</p>
+        <p>Check out our amazing products!</p>
+    </div>
+
+    <div class="chat-container">
+        <button class="chat-toggle-btn" onclick="toggleChat()">
+            <i class="ri-chat-1-line"></i>
+        </button>
+        <div id="chat-box" class="chat-box">
+            <div class="chat-title">
+                Chat with us
+                <button class="close-btn" onclick="toggleChat()">&times;</button>
+            </div>
+            <div class="chat-content">
+                <!-- Chat content here -->
+                <h6 style="color: black;">Hi, How may I help you !!</h6>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="mb-3 lg:mb-6">
+            <h2>
+                <div>
+                    <p style="color: white;">Why <span class="blue-underline">Choose Us</span></p>
+                </div>
+            </h2>
+        </div>
+        <div
+            class="bg-cover lg:grid lg:justify-items-center lg:pt-6 lg:mx-auto lg:bg-contain lg:bg-no-repeat max-w-screen-lg">
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center w-[40%] lg:py-[30px]">
+                    <div class="tw-5b8mg7">
+                        <h3><span style="white-space:pre-wrap;">Fast Disbursal</span></h3>
+                        <p><span style="white-space:pre-wrap;">Our team helps customers</span><br><span
+                                style="white-space:pre-wrap;">make informed loan</span><br><span
+                                style="white-space:pre-wrap;">decisions.&nbsp;</span></p>
+                    </div>
+                </div>
+                <div class="h-full flex items-center"><span class="block py-6 bg-white"><span
+                            class="bg-[#4FACCA] block"></span></span></div>
+                <div class="w-[40%] flex items-center lg:py-[30px]"><img
+                        src="https://cdn1.mymoneymantra.com/fast_new_984afb322c.svg" height="250px" width="250px"
+                        alt="fast_new" loading="lazy" decoding="async" class="w-full lg:w-[300px] lg:h-[142px]"></div>
+            </div>
+            <div data-fresh-key="1" class="flex items-center justify-between w-full">
+                <div class="w-[40%] flex items-center lg:py-[30px]"><img
+                        src="https://cdn1.mymoneymantra.com/safe_new_b895b2c0ef.svg" height="250px" width="250px"
+                        alt="safe_new" loading="lazy" decoding="async" class="w-full lg:w-[300px] lg:h-[142px]"></div>
+                <div class="h-full flex items-center"><span class="block py-6 bg-white"><span
+                            class="bg-[#64B59F] block"></span></span></div>
+                <div class="flex items-center w-[40%] lg:py-[30px]">
+                    <div class="tw-5b8mg7">
+                        <h3><span style="white-space:pre-wrap;">Safe &amp; Secure</span></h3>
+                        <p><span style="white-space:pre-wrap;">Applying for loans and credit cards</span><br><span
+                                style="white-space:pre-wrap;">through MyMoneyMantra is</span><br><span
+                                style="white-space:pre-wrap;">100% safe and secure.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div data-fresh-key="2" class="flex items-center justify-between w-full">
+                <div class="flex items-center w-[40%] lg:py-[30px]">
+                    <div class="tw-5b8mg7">
+                        <h3><span style="white-space:pre-wrap;">Personalised</span></h3>
+                        <p><span style="white-space:pre-wrap;">We curate the best available</span><br><span
+                                style="white-space:pre-wrap;">offers from banks, NBFCs &amp;</span><br><span
+                                style="white-space:pre-wrap;">financial institutions</span></p>
+                    </div>
+                </div>
+                <div class="h-full flex items-center"><span class="block py-6 bg-white"><span
+                            class="bg-[#4FACCA] block"></span></span></div>
+                <div class="w-[40%] flex items-center lg:py-[30px]"><img
+                        src="https://cdn1.mymoneymantra.com/personalized_new_b4da1b75ad.svg" height="250px"
+                        width="250px" alt="personalized_new" loading="lazy" decoding="async"
+                        class="w-full lg:w-[300px] lg:h-[142px]"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+
+
+
+
+
+    <!-- Card -->
+
+
+    <!-- Footer -->
+    <footer style="text-decoration: none;" class="bg-light text-center py-4">
+        <div class="container">
+            <div style="color: black;" class="row">
+                <div class="col-md-3">
+                    <h5>Details</h5>
+                    <ul style="align-items: flex-start;" class="list-unstyled">
+                        <li><a href="aboutus.html" class="text-dark">About Us</a></li>
+
+                        <li><a href="about.html" class="text-dark">Subcribe</a></li>
+
+                        <li><a href="contact.html" class="text-dark">Contact Us</a></li>
+                        <li><a href="about.html" class="text-dark">Terms & Conditions</a></li>
+                        <li><a href="#" class="text-dark">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Help Center</a></li>
+                        <li><a href="#" class="text-dark">FAQs</a></li>
+                        <li><a href="#" class="text-dark">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Social Media</h5>
+                    <a href="#" class="text-dark mx-2"><i class="ri-facebook-circle-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-twitter-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="text-dark mx-2"><i class="ri-linkedin-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+
+</html>

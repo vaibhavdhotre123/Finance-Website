@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Dashboard content here -->
+         Are You sure want to Logout !!
+    </div>
+
+    <button id="logoutBtn">Logout</button>
+
+    <script>
+        // script.js
+
+// Function to handle logout
+function logout() {
+    // Clear any session data or authentication token
+    localStorage.removeItem('authToken'); // Example: Remove token from localStorage
+
+    // Redirect to login page or perform other logout actions
+    window.location.href = 'login.html'; // Example: Redirect to login page
+}
+
+// Event listener for logout button
+document.getElementById('logoutBtn').addEventListener('click', logout);
+
+    </script>
+</body>
+
+<style>
+    /* styles.css */
+
+#logoutBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#logoutBtn:hover {
+    background-color: #d32f2f;
+}
+
+</style>
+</html>

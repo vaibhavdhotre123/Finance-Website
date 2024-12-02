@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Loan Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Business Loan Application</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to our business loan application page. We are here to help you grow your business with the financial support you need.</p>
+        </section>
+
+        <section>
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li>Business must be registered and operational for at least 2 years.</li>
+                <li>Good credit history.</li>
+                <li>Minimum annual revenue of $100,000.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Required Documents</h2>
+            <ul>
+                <li>Business Registration Certificate</li>
+                <li>Tax Returns for the last 2 years</li>
+                <li>Bank Statements for the last 6 months</li>
+                <li>Business Plan</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Application Form</h2>
+            <form action="/submit-loan-application" method="post">
+                <div class="form-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" name="business-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="owner-name">Owner's Name</label>
+                    <input type="text" id="owner-name" name="owner-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="annual-revenue">Annual Revenue</label>
+                    <input type="number" id="annual-revenue" name="annual-revenue" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan-amount">Desired Loan Amount</label>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description of Business</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

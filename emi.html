@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html"><i class="ri-arrow-go-back-line"></i></a> EMI Calculator</h1>
+        </header>
+
+        <div class="description">
+            <div class="description-content">
+                <h2>EMI</h2>
+                <p>An EMI (Equated Monthly Installment) Calculator is a financial tool used to calculate the fixed monthly
+                    payment amount that a borrower must pay to repay a loan over a specified period of time. Here are the
+                    benefits and pros of using an EMI Calculator:</p>
+            </div>
+            <div class="benefits">
+                <h2>Benefits and Pros of EMI Calculators:</h2>
+                <ul>
+                    <li>Accurate Calculations: EMI calculators provide accurate calculations of the monthly installment
+                        based on the loan amount, interest rate, and tenure. This helps borrowers plan their finances
+                        effectively.</li>
+                    <li>Time-Saving: It saves time compared to manual calculations, as it provides instant results.</li>
+                    <li>Financial Planning: By knowing the EMI in advance, borrowers can plan their monthly budget and
+                        manage their finances better.</li>
+                    <li>Comparison of Loan Offers: Borrowers can compare different loan offers from various lenders by
+                        adjusting the loan amount, interest rate, and tenure to see which option suits them best.</li>
+                    <li>Transparency: EMI calculators offer transparency in terms of how much will be paid towards
+                        interest and principal over the loan tenure.</li>
+                    <li>Interest Rate Sensitivity: Allows borrowers to see how changes in interest rates affect their
+                        EMIs, helping them decide between fixed and variable rate loans.</li>
+                    <li>Prepayment and Part-Payment Analysis: Some advanced EMI calculators can factor in prepayments and
+                        part-payments, showing how these payments can reduce the loan tenure and total interest paid.</li>
+                </ul>
+                <h2 style="color: blue;">Overall, an EMI calculator is a valuable tool for anyone considering taking out
+                    a loan, as it simplifies complex financial calculations and aids in making well-informed borrowing
+                    decisions.</h2>
+            </div>
+        </div>
+
+        <div class="calculator">
+            <div class="calculator-form">
+                <div class="loan-type-buttons">
+                    <button class="active">Personal Loan</button>
+                    <button>Home Loan</button>
+                    <button>Business Loan</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="loan-amount">Loan Amount (₹)</label>
+                    <input type="number" id="loan-amount" value="1430000" oninput="calculateEMI()">
+                </div>
+
+                <div class="form-group">
+                    <label for="interest-rate">Interest Rate %</label>
+                    <input type="number" id="interest-rate" step="0.01" value="10.75" oninput="calculateEMI()">
+                </div>
+
+                <div class="form-group">
+                    <label for="tenure">Tenure (Months)</label>
+                    <input type="number" id="tenure" value="36" oninput="calculateEMI()">
+                </div>
+            </div>
+
+            <div class="calculator-result">
+                <div class="circle">
+                    <div class="inner-circle">
+                        <span>Your EMI is</span>
+                        <span class="emi-amount" id="emi-amount">₹&nbsp;46,648</span>
+                        <span>Per Month</span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="detail">
+                        <span>Principal Amount</span>
+                        <span id="principal-amount">₹&nbsp;14,30,000</span>
+                    </div>
+                    <div class="detail">
+                        <span>Interest Payable</span>
+                        <span id="interest-payable">₹&nbsp;2,49,328</span>
+                    </div>
+                    <div class="detail">
+                        <span>Total Payment</span>
+                        <span id="total-payment">₹&nbsp;16,79,328</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <button class="apply-button">Apply Now</button>
+            <button class="share-button" onclick="shareEMI()">Share</button>
+        </footer>
+    </div>
+
+    <script>
+        function calculateEMI() {
+            const principal = parseFloat(document.getElementById('loan-amount').value);
+            const annualInterestRate = parseFloat(document.getElementById('interest-rate').value);
+            const tenure = parseFloat(document.getElementById('tenure').value);
+
+            if (isNaN(principal) || isNaN(annualInterestRate) || isNaN(tenure)) {
+                return;
+            }
+
+            const monthlyInterestRate = annualInterestRate / (12 * 100);
+            const emi = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, tenure)) / (Math.pow(1 + monthlyInterestRate, tenure) - 1);
+            const totalPayment = emi * tenure;
+            const interestPayable = totalPayment - principal;
+
+            document.getElementById('emi-amount').innerText = `₹ ${emi.toFixed(0)}`;
+            document.getElementById('principal-amount').innerText = `₹ ${principal.toLocaleString()}`;
+            document.getElementById('interest-payable').innerText = `₹ ${interestPayable.toFixed(0).toLocaleString()}`;
+            document.getElementById('total-payment').innerText = `₹ ${totalPayment.toFixed(0).toLocaleString()}`;
+        }
+
+        function shareEMI() {
+            const principal = document.getElementById('loan-amount').value;
+            const annualInterestRate = document.getElementById('interest-rate').value;
+            const tenure = document.getElementById('tenure').value;
+            const emi = document.getElementById('emi-amount').innerText;
+            const totalPayment = document.getElementById('total-payment').innerText;
+            const interestPayable = document.getElementById('interest-payable').innerText;
+
+            const emailBody = `Loan Amount: ₹${principal}\nInterest Rate: ${annualInterestRate}%\nTenure: ${tenure} months\n\nEMI: ${emi} per month\nTotal Payment: ${totalPayment}\nInterest Payable: ${interestPayable}`;
+            const mailtoLink = `mailto:?subject=EMI Calculation&body=${encodeURIComponent(emailBody)}`;
+
+            window.location.href = mailtoLink;
+        }
+
+        // Initial calculation
+        calculateEMI();
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            margin-bottom: 20px;
+        }
+
+        .description-content,
+        .benefits {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .calculator {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .calculator-form,
+        .calculator-result {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .loan-type-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .loan-type-buttons button {
+            flex: 1;
+            margin: 0 5px;
+            padding: 10px;
+            border: none;
+            background-color: #e9ecef;
+            color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .loan-type-buttons button.active {
+            background-color: #3593B0;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .calculator-result .circle {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: conic-gradient(rgb(41, 114, 137) 0deg, rgb(41, 114, 137) 307deg, rgb(118, 191, 214) 307deg, rgb(118, 191, 214) 360deg);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calculator-result .inner-circle {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .calculator-result .inner-circle .emi-amount {
+            color: #3593B0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .calculator-result .details {
+            margin-top: 20px;
+        }
+
+        .calculator-result .detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .apply-button,
+        .share-button {
+            background-color: #3593B0;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .calculator {
+                flex-direction: column;
+            }
+
+            .calculator-form,
+            .calculator-result {
+                width: 100%;
+                margin-bottom: 20px;
+                margin-left: -13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .calculator-result .circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .calculator-result .inner-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .calculator-result .detail {
+                font-size: 16px;
+            }
+
+            .apply-button,
+            .share-button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</body>
+
+</html>

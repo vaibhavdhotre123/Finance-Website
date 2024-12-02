@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Loan Application</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            background-color: #091925;
+
+          
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease;
+        
+        }
+        h1, h2 {
+            color: #333;
+            animation: slideIn 1s ease;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        .file-upload {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .file-upload .form-group {
+            flex: 1 1 30%;
+            margin-right: 10px;
+        }
+        .file-upload .form-group:last-child {
+            margin-right: 0;
+        }
+        .file-upload{
+            width: 18rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo.png" alt="" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="creditCardDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Credit Card
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="creditCardDropdown">
+                            <a class="dropdown-item" href="axis1.html">Axis Bank Credit Card</a>
+                            <a class="dropdown-item" href="hdfc1.html">HDFC Credit Card</a>
+                            <a class="dropdown-item" href="sbi1.html">SBI Credit Card</a>
+                           
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Loans
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="loansDropdown">
+                            <a class="dropdown-item" href="personalloan.html">Personal Loan</a>
+                            <a class="dropdown-item" href="businessloan.html">Business Loan</a>
+                            <a class="dropdown-item" href="loans.html">Property Loan</a>
+                         
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ToolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="ToolsDropdown">
+                            <a class="dropdown-item" href="emi.html">EMI Calculator</a>
+                            <a class="dropdown-item" href="cibil.html">CIBIL SCORE</a>
+                            <a class="dropdown-item" href="#">EXTRA</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blogs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                            <a class="dropdown-item" href="blog.html">Blogs</a>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="creditScoreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Google Form
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="creditScoreDropdown">
+                          
+                            <a  class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdbCbfWwAz1vF-Ze-t_OUuPLng6Rpf9wKluqJck0emkqb0xlw/viewform?usp=pp_url">Form-1</a>
+    
+    
+                            <a class="dropdown-item" href="#">Form-2</a>
+                            <a class="dropdown-item" href="#">Form-3</a>
+                        </div>
+                    </li>
+    
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Others
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                            <a class="dropdown-item" href="apply.html">Apply</a>
+                            <a class="dropdown-item" href="Payment.html">Payment</a>
+                            <a class="dropdown-item" href="#">Form-3</a>
+                            
+                        </div>
+                    </li>
+                  
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html">Sign-UP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="user.html"><button class="btn btn-outline-success"> <i class="ri-id-card-line"></i>My Profile</button></a>  
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1 style="color: white;background:linear-gradient(to left,green, blue)">Business Loan Application</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to our business loan application page. We are here to help you grow your business with the financial support you need.</p>
+        </section>
+
+        <section>
+            <h2>Eligibility Criteria</h2>
+            <ul>
+                <li>Business must be registered and operational for at least 2 years.</li>
+                <li>Good credit history.</li>
+                <li>Minimum annual revenue of $100,000.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Required Documents</h2>
+            <ul>
+                <li>Business Registration Certificate</li>
+                <li>Tax Returns for the last 2 years</li>
+                <li>Bank Statements for the last 6 months</li>
+                <li>Business Plan</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Application Form</h2>
+            <form action="" method="post">
+
+                <div class="form-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" name="business-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="owner-name">Owner's Name</label>
+                    <input type="text" id="owner-name" name="owner-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="annual-revenue">Annual Revenue</label>
+                    <input type="number" id="annual-revenue" name="annual-revenue" required>
+                </div>
+                <div class="form-group">
+                    <label for="loan-amount">Desired Loan Amount</label>
+                    <input type="number" id="loan-amount" name="loan-amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description of Business</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="file-upload">
+                    <div class="form-group">
+                        <label for="aadhar">Upload Aadhar:</label>
+                        <input type="file" class="form-control-file" id="aadhar" name="aadhar" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tax">Upload Tax:</label>
+                        <input type="file" class="form-control-file" id="tax" name="tax" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pan-card">Upload Pan-Card:</label>
+                        <input type="file" class="form-control-file" id="pan-card" name="pan-card" accept="image/*" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit Application</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

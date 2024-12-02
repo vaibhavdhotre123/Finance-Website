@@ -1,0 +1,90 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+background: none;
+    background-color: #1a3448;
+    /* background-color: #EFF3EB; */
+
+    
+    
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+
+   
+    padding: 16px;
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+   
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+
+    text-decoration: none;
+    background-color: white ;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+ 
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    background-color: aliceblue;
+  
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 12px;
+
+}
+ button{
+    padding: 10px 25px;
+    margin-right: 30px;
+    margin-top: 2%;
+}
+#navbar img{
+    width: 60px;
+    height: 50px;
+    padding: 20xp 2%;
+    margin: 20px;
+    color: white;
+}

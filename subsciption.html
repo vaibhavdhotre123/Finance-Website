@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Basic styling */
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #b9b9b9;
+            background-color: #e3e3e3;
+            padding: 1em;
+        }
+        
+        .container {
+            max-width: 38em;
+            margin: 0 auto;
+            padding: 1em 3em 2em 3em;
+            background-color: #fff;
+            border-radius: 4.2px;
+            box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .row {
+            margin-bottom: 1em;
+            overflow: hidden;
+        }
+        
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+        }
+        
+        .col-half {
+            width: 50%;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .col-half:last-child {
+            padding-right: 0;
+        }
+        
+        .col-third {
+            width: 33.33333333%;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .col-third:last-child {
+            padding-right: 0;
+        }
+        
+        h4 {
+            color: #f0a500;
+        }
+        
+        /* Input and Select styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="radio"],
+        input[type="checkbox"],
+        select {
+            width: 90%;
+            padding: 1em;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            transition: all 0.35s ease-in-out;
+        }
+        
+        input:focus {
+            outline: 0;
+            border-color: #bd8200;
+        }
+        
+        /* Radio and Checkbox specific styles */
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            float: left;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        
+        input[type="radio"] + label:first-of-type,
+        input[type="checkbox"] + label:first-of-type {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        input[type="radio"] + label:last-of-type,
+        input[type="checkbox"] + label:last-of-type {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        input[type="radio"]:checked + label,
+        input[type="checkbox"]:checked + label {
+            background-color: #f0a500;
+            color: #fff;
+            border-color: #bd8200;
+        }
+        
+        /* Input group styles */
+        .input-group {
+            margin-bottom: 1em;
+            overflow: hidden;
+        }
+        
+        .input-group-icon {
+            position: relative;
+        }
+        
+        .input-group-icon input {
+            padding-left: 4.4em;
+        }
+        
+        .input-group-icon .input-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3.4em;
+            height: 3.4em;
+            line-height: 3.4em;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .input-group-icon .input-icon:after {
+            position: absolute;
+            top: 0.6em;
+            left: 3.4em;
+            display: block;
+            border-right: 1px solid #e5e5e5;
+            content: "";
+            transition: all 0.35s ease-in-out;
+        }
+        
+        .input-group-icon input:focus + .input-icon i {
+            color: #f0a500;
+        }
+        
+        .input-group-icon input:focus + .input-icon:after {
+            border-right-color: #f0a500;
+        }
+        
+        /* Checkbox label styling */
+        input[type="checkbox"] + label:before {
+            position: absolute;
+            top: 0.2em;
+            left: 0;
+            display: block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            content: "";
+            border: 1px solid #ccc;
+        }
+        
+        input[type="checkbox"] + label:after {
+            position: absolute;
+            top: 0.45em;
+            left: 0.2em;
+            font-size: 0.8em;
+            color: #fff;
+            opacity: 0;
+            font-family: FontAwesome;
+            content: "\f00c";
+            transition: opacity 0.3s ease;
+        }
+        
+        input[type="checkbox"]:checked + label:after {
+            opacity: 1;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <h4>Payment Details</h4>
+        <div class="input-group">
+            <input id="payment-method-card" type="radio" name="payment-method" value="card" checked>
+            <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i> Credit Card</span></label>
+            <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal">
+            <label for="payment-method-paypal"><span><i class="fa fa-cc-paypal"></i> Paypal</span></label>
+        </div>
+        <div class="input-group input-group-icon">
+            <input type="text" placeholder="Card Number">
+            <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+        </div>
+        <div class="col-half">
+            <div class="input-group input-group-icon">
+                <input type="text" placeholder="Card CVC">
+                <div class="input-icon"><i class="fa fa-user"></i></div>
+            </div>
+        </div>
+        <div class="col-half">
+            <div class="input-group">
+                <select>
+                    <option>01 Jan</option>
+                    <option>02 Jan</option>
+                    <option>03 Jan</option>
+                    <option>04 Jan</option>
+                    <option>05 Jan</option>
+                    <option>06 Jan</option>
+                    <option>07 Jan</option>
+                    <option>08 Jan</option>
+                    <option>09 Jan</option>
+                    <option>10 Jan</option>
+                </select>
+                <select>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <h4>Terms and Conditions</h4>
+        <div class="input-group">
+            <input id="terms" type="checkbox">
+            <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+        </div>
+        <center><button  id="submitButton" style=" width:7rem;  border:1px solid black; border-radius:1vw;padding:1vh;border-radius:1vh; background-color:#F0A500; color:white;">Submit</button></center>
+    </div>
+
+   
+
+
+    
+</body>
+<style>
+    button:hover{
+color: #b9b9b9;
+    }
+</style>
+
+
+
+    <style>
+        /* Basic styling for the button */
+        button {
+            width: 7vw;
+            border: 1px solid black;
+            border-radius: 1vw;
+            padding: 1vh;
+            background-color: #F0A500;
+            color: white;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Center align the button */
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button with center alignment -->
+    
+
+    <!-- JavaScript to handle popup message -->
+    <script>
+        // Get the button element by its ID
+        const submitButton = document.getElementById('submitButton');
+
+        // Add click event listener to the button
+        submitButton.addEventListener('click', function() {
+            // Show a popup message
+            alert('Your form has been submitted!');
+        });
+    </script>
+
+</body>
+</html>

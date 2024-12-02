@@ -1,0 +1,20 @@
+{
+  "name": "phonepe-poc",
+  "version": "1.0.0",
+  "description": "Proof of Concept for PhonePe integration",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "sha256": "^0.2.0",
+    "uniqid": "^5.4.0"
+  }
+}

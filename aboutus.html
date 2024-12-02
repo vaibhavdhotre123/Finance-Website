@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar h4 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            color: #0056b3;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .qa-container {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .qa-item {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .qa-question {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .qa-question:hover {
+            background-color: #0056b3;
+        }
+
+        .qa-answer {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ddd;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-header h2 {
+            color: #007bff;
+        }
+
+        .terms-conditions ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .terms-conditions li {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .terms-conditions li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .terms-conditions li:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav1">
+            <h4>Get To Know Us Better <a href="index.html"><i class="ri-arrow-left-s-fill"></i></a></h4>
+        </div>
+        <p>Visit Our Site For Best Compensation and Loans</p>
+    </div>
+    <hr style="width: 90%; color: blueviolet; margin: 20px auto;">
+
+    <div class="container">
+        <h2>Who Are We:</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora fugit in sit magni voluptates! Eos,
+            similique inventore? Optio quae, autem, culpa iste tenetur, laudantium fuga nesciunt minima sint
+            amet explicabo.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia amet illum est aliquam harum
+            molestias et? Ab impedit voluptate ipsum nisi deleniti itaque, repellat, a facilis alias eum ut
+            similique.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse a quisquam ipsum eos nisi sit
+            quibusdam ducimus eaque maxime nihil corporis, consequatur suscipit blanditiis? Quibusdam placeat
+            error est illo quo!</p>
+
+        <h2 style="color: #ff69b4;">Why We Are Unique From the Rest:</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed autem ullam necessitatibus nam mollitia
+            in dolor at, laudantium natus exercitationem eaque? Obcaecati adipisci corrupti architecto minima
+            voluptatibus repellat expedita soluta.</p>
+
+        <button id="alertButton">Get Alert</button>
+        <button>Subscribe</button>
+    </div>
+
+    <div class="qa-container">
+        <h2>Questions and Answers:</h2>
+        <div class="qa-item">
+            <button class="qa-question">For what purpose is this platform used?</button>
+            <div class="qa-answer">
+                <p>This platform is for people to check their credit score, EMI, and apply for various loan
+                    options with easy and simple paperwork.</p>
+            </div>
+        </div>
+        <div class="qa-item">
+            <button class="qa-question">What do you do?</button>
+            <div class="qa-answer">
+                <p>I am an AI language model developed by OpenAI to assist with various queries and tasks.</p>
+            </div>
+        </div>
+        <div class="qa-item">
+            <button class="qa-question">How can you help me?</button>
+            <div class="qa-answer">
+                <p>I can provide information, generate text, assist with programming, and much more. Just ask
+                    your question!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container terms-conditions">
+        <h3>Terms & Conditions</h3>
+        <ul>
+            <li>18+ Years of Age</li>
+            <li>Permanent Job</li>
+            <li>Payment Score</li>
+            <li>Bank Balance</li>
+            <li><a href="cibil.html">Cibil Score</a></li>
+        </ul>
+    </div>
+
+    <div class="container" style="margin-bottom: 2rem;">
+        <div class="faq-header">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            What is a Axis loan? <i class="fa fa-chevron-up"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Axis loan is a type of unsecured loan that helps you meet your current financial needs. You don’t
+                        need to pledge any collateral or security to avail a Axis loan.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            How do I apply for a Axis loan? <i class="fa fa-chevron-up"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        You can apply for a Axis loan online by visiting the official website of the lender or through
+                        their mobile app. You can also apply by visiting the nearest branch of the lender.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree">
+                            What is the eligibility criteria for a Axis loan? <i class="fa fa-chevron-up"></i>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        The eligibility criteria for a Axis loan varies from lender to lender. Generally, you need to be
+                        a

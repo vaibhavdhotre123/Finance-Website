@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Basic styling */
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 2em;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .row {
+            margin-bottom: 1.5em;
+        }
+        
+        h4 {
+            color: #f0a500;
+            margin-bottom: 1em;
+        }
+        
+        /* Input and Select styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 1em;
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        input:focus {
+            outline: 0;
+            border-color: #f0a500;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5em;
+        }
+        
+        .input-group-icon {
+            position: relative;
+        }
+        
+        .input-group-icon input {
+            padding-left: 2.5em;
+        }
+        
+        .input-group-icon .input-icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+            color: #ccc;
+        }
+        
+        .input-group-icon input:focus + .input-icon {
+            color: #f0a500;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        
+        .content a {
+            text-decoration: none;
+            color: #f0a500;
+        }
+        
+        .content a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 1em;
+            background-color: #f0a500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .btn:hover {
+            background-color: #d18b00;
+        }
+        
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form action="login.php" method="post">
+            <div class="content">
+                <h4>Account</h4>
+                <a href="index.html"><h4>Back to Home-Page</h4></a>
+            </div>
+            <p>Apply For Credit-Cards | Insurance-Loans</p> <br>
+            <div class="input-group input-group-icon">
+                <input type="text" id="user" name="user" placeholder="Full Name" required>
+                <div class="input-icon"><i class="fa fa-user"></i></div>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="password" id="pass" name="pass" placeholder="Password" required>
+                <div class="input-icon"><i class="fa fa-key"></i></div>
+            </div>
+            <div class="input-group input-group-icon">
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <div class="input-icon"><i class="fa fa-envelope"></i></div>
+            </div>
+            <div class="row">
+                <h4>Date of Birth</h4>
+                <div class="input-group">
+                    <input type="text" id="date" name="date" placeholder="DD" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="month" name="month" placeholder="MM" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="year" name="year" placeholder="YYYY" required>
+                </div>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Your form has been submitted!");
+        }
+        
+        const submitButton = document.querySelector('button[type="submit"]');
+        submitButton.addEventListener('click', showMessage);
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #091925;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            background-color: #1c2b36;
+        }
+
+        nav .logo img {
+            height: 50px;
+        }
+
+        nav .nav-links {
+            display: flex;
+          flex-wrap: wrap;
+            gap: 2px;
+        }
+
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+          
+        }
+
+        nav .nav-links a:hover {
+            background-color: #3a4e58;
+        }
+        button{
+            width: 13rem;
+        }
+
+        .n {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content .c1, .content .c2 {
+            flex: 1 1 45%;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1c2b36;
+        }
+
+        .content .c1 h1, .content .c1 h2, .content .c1 p {
+            margin-bottom: 20px;
+        }
+
+        .content .c2 img {
+            width: 100%;
+            border-radius: 3px;
+        }
+
+        .content .c1 button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #89CF3F;
+            color: white;
+            cursor: pointer;
+        }
+
+        .content .c1 button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .info-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .info-section:hover{
+            transform: scale(1);
+        }
+
+        .info-section .info-box {
+            flex: 1 1 30%;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #1c2b36;
+            line-height: 1.5;
+        }
+
+        .info-section .info-box h2, .info-section .info-box p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content, .info-section {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html">Credit Cards</a>
+            <a href="emi.html">EMI Checker</a>
+            <a href="cibil.html">Cibil-Score Checker</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Toll NO: 34567809</a>
+            <a  href="index.html"><button style="width: 21vw; height:4vh;">Back</button></a>
+        </div>
+
+
+
+        
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+
+    <div class="n">
+        <a href="index.html"><span style="color: green; text-decoration:none">Home</span></a> <span style="color: grey">|</span> <span></span><span>Credit Cards</span>
+    </div>
+
+    <div class="content">
+        <div class="c1">
+            <h2 style="color: #89CF3F;">Best Deal on Loans on Various Properties</h2>
+            <h1>Dream Big</h1>
+            <p style="line-height: 3vh;">Our policy offers a variety of SBI credit cards to meet every customer’s needs. You can choose the best SBI credit card according to your requirement like Lifestyle, Shopping, Travel, Rewards, and Cashback. All SBI credit card types have their own set of benefits.</p>
+            <button><a href="https://www.sbicard.com/sprint/simplySAVERupay?CS=org">Apply now</a></button>
+            <br>
+            <br>
+            <p>On Policy Demand</p>
+        </div>
+        <div class="c2">
+            <img src="https://img.freepik.com/free-photo/house-calculator-with-dollar-bills_1150-18698.jpg?t=st=1718792724~exp=1718796324~hmac=b722815f0f03841c3b3beeac2cd7c2de699380603026dfddfae8d3c2ad12a466&w=1060" alt="">
+        </div>
+    </div>
+
+    <div class="info-section">
+        <div class="info-box">
+            <h2>Lowest Interest Rate</h2>
+            <p>Home loan interest rates are the lowest ever in the past 15 years. With the best offers on home loans, you can currently avail of the best interest rate on home loans starting at 8.50% p.a for all loan amounts.</p>
+        </div>
+        <div class="info-box">
+            <h2>Lowest Interest Rate</h2>
+            <p>Home loan interest rates are the lowest ever in the past 15 years. With the best offers on home loans, you can currently avail of the best interest rate on home loans starting at 8.50% p.a for all loan amounts.</p>
+        </div>
+        <div class="info-box">
+            <h2>Lowest Interest Rate</h2>
+            <p>Home loan interest rates are the lowest ever in the past 15 years. With the best offers on home loans, you can currently avail of the best interest rate on home loans starting at 8.50% p.a for all loan amounts.</p>
+        </div>
+    </div>
+
+
+
+    
+    <div class="content">
+
+        <div class="c2">
+            <img src="https://img.freepik.com/free-photo/house-calculator-with-dollar-bills_1150-18698.jpg?t=st=1718792724~exp=1718796324~hmac=b722815f0f03841c3b3beeac2cd7c2de699380603026dfddfae8d3c2ad12a466&w=1060" alt="">
+        </div>
+        <div class="c1">
+            <h2 style="color: #89CF3F;">Best Deal on Loans on Various Properties</h2>
+            <h1>Dream Big</h1>
+            <p style="line-height: 3vh;">Our policy offers a variety of SBI credit cards to meet every customer’s needs. You can choose the best SBI credit card according to your requirement like Lifestyle, Shopping, Travel, Rewards, and Cashback. All SBI credit card types have their own set of benefits.</p>
+            <button><a href="https://www.sbicard.com/sprint/simplySAVERupay?CS=org">Apply now</a></button>
+            <br>
+            <br>
+            <p>On Policy Demand</p>
+        </div>
+      
+    </div>
+
+
+    <div class="content">
+
+        <div class="c2">
+            <img src="https://img.freepik.com/free-photo/woman-showing-with-one-hand-mini-house-real-state-concept-ai-generative_123827-24098.jpg?t=st=1718962325~exp=1718965925~hmac=afec72144412fd5c19a75492c0426c5a652c1ed0975c978bd53855d5b3caa4ff&w=1060" alt="">
+        </div>
+        <div class="c1">
+            <h2 style="color: #89CF3F;">Best Deal on Loans on Various Properties</h2>
+            <h1>Dream Big</h1>
+            <p style="line-height: 3vh;">Our policy offers a variety of SBI credit cards to meet every customer’s needs. You can choose the best SBI credit card according to your requirement like Lifestyle, Shopping, Travel, Rewards, and Cashback. All SBI credit card types have their own set of benefits.</p>
+            <button><a href="https://www.sbicard.com/sprint/simplySAVERupay?CS=org">Apply now</a></button>
+            <br>
+            <br>
+            <p>On Policy Demand</p>
+        </div>
+      
+    </div>  
+</body>
+</html>

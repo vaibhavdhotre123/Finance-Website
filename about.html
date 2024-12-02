@@ -1,0 +1,427 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Mantra</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Logo" style="max-height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <ul class="navbar-nav">
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="creditCardDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Credit Card
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="creditCardDropdown">
+                        <a class="dropdown-item" href="axis1.html">Axis Bank Credit Card</a>
+                        <a class="dropdown-item" href="hdfc1.html">HDFC Credit Card</a>
+                        <a class="dropdown-item" href="sbi1.html">SBI Credit Card</a>
+                       
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loansDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Loans
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="loansDropdown">
+                        <a class="dropdown-item" href="personalloan.html">Personal Loan</a>
+                        <a class="dropdown-item" href="businessloan.html">Business Loan</a>
+                        <a class="dropdown-item" href="loans.html">Property Loan</a>
+                     
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="creditScoreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Google Form
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="creditScoreDropdown">
+                      
+                        <a  class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdbCbfWwAz1vF-Ze-t_OUuPLng6Rpf9wKluqJck0emkqb0xlw/viewform?usp=pp_url">Form-1</a>
+
+
+                        <a class="dropdown-item" href="#">Form-2</a>
+                        <a class="dropdown-item" href="#">Form-3</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Others
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                        <a class="dropdown-item" href="apply.html">Apply</a>
+                        <a class="dropdown-item" href="myprofile.html">My Profile</a>
+                        <a class="dropdown-item" href="#">Form-3</a>
+                        
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="ToolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tools
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="ToolsDropdown">
+                        <a class="dropdown-item" href="emi.html">EMI Calculator</a>
+                        <a class="dropdown-item" href="cibil.html">CIBIL SCORE</a>
+                        <a class="dropdown-item" href="#">EXTRA</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="blogsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Blogs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="blogsDropdown">
+                        <a class="dropdown-item" href="blog.html">Blogs</a>
+                        
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">Login</a>
+                </li>
+                <li style="width: 3vw;" class="nav-item">
+                    <button  class="btn btn-success">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+ 
+</div>
+
+<script>
+    function showMessage() {
+        alert("Data Submitted Successfully!");
+    }
+</script>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Basic styling */
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            color: #b9b9b9;
+            background-color: #e3e3e3;
+            padding: 1em;
+        }
+        
+        .container {
+            max-width: 38em;
+            margin: 0 auto;
+            padding: 1em 3em 2em 3em;
+            background-color: #fff;
+            border-radius: 4.2px;
+            box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .row {
+            margin-bottom: 1em;
+            overflow: hidden;
+        }
+        
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+        }
+        
+        .col-half {
+            width: 50%;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .col-half:last-child {
+            padding-right: 0;
+        }
+        
+        .col-third {
+            width: 33.33333333%;
+            float: left;
+            padding-right: 10px;
+        }
+        
+        .col-third:last-child {
+            padding-right: 0;
+        }
+        
+        h4 {
+            color: #f0a500;
+        }
+        
+        /* Input and Select styles */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="radio"],
+        input[type="checkbox"],
+        select {
+            width: 100%;
+            padding: 1em;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            transition: all 0.35s ease-in-out;
+        }
+        
+        input:focus {
+            outline: 0;
+            border-color: #bd8200;
+        }
+        
+        /* Radio and Checkbox specific styles */
+        input[type="radio"],
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            float: left;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        
+        input[type="radio"] + label:first-of-type,
+        input[type="checkbox"] + label:first-of-type {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        
+        input[type="radio"] + label:last-of-type,
+        input[type="checkbox"] + label:last-of-type {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        
+        input[type="radio"]:checked + label,
+        input[type="checkbox"]:checked + label {
+            background-color: #f0a500;
+            color: #fff;
+            border-color: #bd8200;
+        }
+        
+        /* Input group styles */
+        .input-group {
+            margin-bottom: 1em;
+            overflow: hidden;
+        }
+        
+        .input-group-icon {
+            position: relative;
+        }
+        
+        .input-group-icon input {
+            padding-left: 4.4em;
+        }
+        
+        .input-group-icon .input-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3.4em;
+            height: 3.4em;
+            line-height: 3.4em;
+            text-align: center;
+            pointer-events: none;
+        }
+        
+        .input-group-icon .input-icon:after {
+            position: absolute;
+            top: 0.6em;
+            left: 3.4em;
+            display: block;
+            border-right: 1px solid #e5e5e5;
+            content: "";
+            transition: all 0.35s ease-in-out;
+        }
+        
+        .input-group-icon input:focus + .input-icon i {
+            color: #f0a500;
+        }
+        
+        .input-group-icon input:focus + .input-icon:after {
+            border-right-color: #f0a500;
+        }
+        
+        /* Checkbox label styling */
+        input[type="checkbox"] + label:before {
+            position: absolute;
+            top: 0.2em;
+            left: 0;
+            display: block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            content: "";
+            border: 1px solid #ccc;
+        }
+        
+        input[type="checkbox"] + label:after {
+            position: absolute;
+            top: 0.45em;
+            left: 0.2em;
+            font-size: 0.8em;
+            color: #fff;
+            opacity: 0;
+            font-family: FontAwesome;
+            content: "\f00c";
+            transition: opacity 0.3s ease;
+        }
+        
+        input[type="checkbox"]:checked + label:after {
+            opacity: 1;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+    </style>
+</head>
+<body>
+
+    <br>
+    <br>
+    <br>
+   <div class="container"> 
+        <form action="login2.php" method="post">
+            <div class="row">
+                <div class="content">
+                <div class="c2">
+                <h4>Account</h4>
+            </div>
+
+            <div class="c3">
+               <a style="text-decoration: none;display:flex;align-items:center; justify-content:space-around;margin-left:3rem" href="index.html"><h4>Back to HOme-Page</h4></a> 
+            </div>
+
+        </div>
+                <p>Apply For Credit-Cards | Insurance-Loans</p>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="user"name="user" placeholder="Full Name">
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+               
+                <div class="input-group input-group-icon">
+                    <input type="password" id="pass" name="pass"  placeholder="Password">
+                    <div class="input-icon"><i class="fa fa-key"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="email" id="email" name="email" placeholder="Email Address">
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-half">
+                    <h4>Date of Birth</h4>
+                    <div class="input-group">
+                        <div class="col-third"><input type="text" id="date" name="date" placeholder="DD"></div>
+                        <div class="col-third"><input type="text" id="month" name="month" placeholder="MM"></div>
+                        <div class="col-third"><input type="text" id="year" name="year" placeholder="YYYY"></div>
+                    </div>
+                </div>
+              
+            </div>
+
+       
+           <button style="border: 1px solid black; border-radius:7px; width:8rem;">Submit</button>
+        </form>
+    </div> 
+
+   
+
+</body>
+<style>
+    button:hover{
+color: #b9b9b9;
+    }
+</style>
+
+
+
+    <style>
+        /* Basic styling for the button */
+        button {
+            width: 7vw;
+            border: 1px solid black;
+            border-radius: 1vw;
+            padding: 1vh;
+            background-color: #F0A500;
+            color: white;
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Center align the button */
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button with center alignment -->
+    
+
+    <!-- JavaScript to handle popup message -->
+    <script>
+        // Get the button element by its ID
+        const submitButton = document.getElementById('submitButton');
+
+        // Add click event listener to the button
+        submitButton.addEventListener('click', function() {
+            // Show a popup message
+            alert('Your form has been submitted!');
+        });
+    </script>
+
+</body>
+</html>

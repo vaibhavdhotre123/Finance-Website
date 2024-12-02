@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY Mantra</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #709F3B;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #fff;
+        }
+
+        .content {
+            margin-top: 5rem;
+            text-align: center;
+        }
+
+        .content h1 {
+            color: #709F3B;
+            font-weight: bold;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control {
+            border-radius: 20px;
+        }
+
+        .btn-custom {
+            background-color: #709F3B;
+            color: #fff;
+            border-radius: 20px;
+        }
+
+        .btn-custom:hover {
+            background-color: #567d2a;
+            color: #fff;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #709F3B;
+        }
+
+        .footer a:hover {
+            text-decoration: none;
+            color: #567d2a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Money-Mantra</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="signup.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <h1>Welcome to Money-Mantra</h1>
+        <p>One Stop Solutions for all Loans and Credit Cards Requirements</p>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <h2 class="text-center mb-4">Sign Up to Your Account</h2>
+                    <form action="login.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="p1" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="p2" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="p3" class="form-control" placeholder="Number" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-custom btn-block" onclick="showMessage()">Submit</button>
+                        </div>
+                    </form>
+                    <p class="mt-3 text-center">Already registered? Please <a href="#">click here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Money-Mantra. All rights reserved.</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Data Submitted Successfully!");
+        }
+    </script>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
